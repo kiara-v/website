@@ -1,15 +1,3 @@
-/*
-
-
-
-If you want to know how this game was made, check out this video, that explains how it's made: 
-
-https://youtu.be/eue3UdFvwPo
-
-Follow me on twitter for more: https://twitter.com/HunorBorbely
-
-*/
-
 // Extend the base functionality of JavaScript
 Array.prototype.last = function () {
   return this[this.length - 1];
@@ -344,7 +332,7 @@ restartButton.addEventListener("click", function (event) {
 function drawPlatforms() {
   platforms.forEach(({ x, w }) => {
     // Draw platform
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "white";
     ctx.fillRect(
       x,
       canvasHeight - platformHeight,
@@ -367,7 +355,7 @@ function drawPlatforms() {
 
 function drawHero() {
   ctx.save();
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "white";
   ctx.translate(
     heroX - heroWidth / 2,
     heroY + canvasHeight - platformHeight - heroHeight / 2
@@ -439,6 +427,7 @@ function drawSticks() {
     // Draw stick
     ctx.beginPath();
     ctx.lineWidth = 2;
+    ctx.strokeStyle = "white";
     ctx.moveTo(0, 0);
     ctx.lineTo(0, -stick.length);
     ctx.stroke();
@@ -450,64 +439,64 @@ function drawSticks() {
 
 function drawBackground() {
   // Draw sky
-  var gradient = ctx.createLinearGradient(0, 0, 0, window.innerHeight);
-  gradient.addColorStop(0, "#BBD691");
-  gradient.addColorStop(1, "#FEF1E1");
-  ctx.fillStyle = gradient;
-  ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+  // var gradient = ctx.createLinearGradient(0, 0, 0, window.innerHeight);
+  // gradient.addColorStop(0, "#d69191");
+  // gradient.addColorStop(1, "#fee1e1");
+  // ctx.fillStyle = gradient;
+  // ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
-  // Draw hills
-  drawHill(hill1BaseHeight, hill1Amplitude, hill1Stretch, "#95C629");
-  drawHill(hill2BaseHeight, hill2Amplitude, hill2Stretch, "#659F1C");
+  // // Draw hills
+  // drawHill(hill1BaseHeight, hill1Amplitude, hill1Stretch, "#95C629");
+  // drawHill(hill2BaseHeight, hill2Amplitude, hill2Stretch, "#659F1C");
 
-  // Draw trees
-  trees.forEach((tree) => drawTree(tree.x, tree.color));
+  // // Draw trees
+  // trees.forEach((tree) => drawTree(tree.x, tree.color));
 }
 
-// A hill is a shape under a stretched out sinus wave
-function drawHill(baseHeight, amplitude, stretch, color) {
-  ctx.beginPath();
-  ctx.moveTo(0, window.innerHeight);
-  ctx.lineTo(0, getHillY(0, baseHeight, amplitude, stretch));
-  for (let i = 0; i < window.innerWidth; i++) {
-    ctx.lineTo(i, getHillY(i, baseHeight, amplitude, stretch));
-  }
-  ctx.lineTo(window.innerWidth, window.innerHeight);
-  ctx.fillStyle = color;
-  ctx.fill();
-}
+// // A hill is a shape under a stretched out sinus wave
+// function drawHill(baseHeight, amplitude, stretch, color) {
+//   ctx.beginPath();
+//   ctx.moveTo(0, window.innerHeight);
+//   ctx.lineTo(0, getHillY(0, baseHeight, amplitude, stretch));
+//   for (let i = 0; i < window.innerWidth; i++) {
+//     ctx.lineTo(i, getHillY(i, baseHeight, amplitude, stretch));
+//   }
+//   ctx.lineTo(window.innerWidth, window.innerHeight);
+//   ctx.fillStyle = color;
+//   ctx.fill();
+// }
 
-function drawTree(x, color) {
-  ctx.save();
-  ctx.translate(
-    (-sceneOffset * backgroundSpeedMultiplier + x) * hill1Stretch,
-    getTreeY(x, hill1BaseHeight, hill1Amplitude)
-  );
+// function drawTree(x, color) {
+//   ctx.save();
+//   ctx.translate(
+//     (-sceneOffset * backgroundSpeedMultiplier + x) * hill1Stretch,
+//     getTreeY(x, hill1BaseHeight, hill1Amplitude)
+//   );
 
-  const treeTrunkHeight = 5;
-  const treeTrunkWidth = 2;
-  const treeCrownHeight = 25;
-  const treeCrownWidth = 10;
+//   const treeTrunkHeight = 5;
+//   const treeTrunkWidth = 2;
+//   const treeCrownHeight = 25;
+//   const treeCrownWidth = 10;
 
-  // Draw trunk
-  ctx.fillStyle = "#7D833C";
-  ctx.fillRect(
-    -treeTrunkWidth / 2,
-    -treeTrunkHeight,
-    treeTrunkWidth,
-    treeTrunkHeight
-  );
+//   // Draw trunk
+//   ctx.fillStyle = "#7D833C";
+//   ctx.fillRect(
+//     -treeTrunkWidth / 2,
+//     -treeTrunkHeight,
+//     treeTrunkWidth,
+//     treeTrunkHeight
+//   );
 
-  // Draw crown
-  ctx.beginPath();
-  ctx.moveTo(-treeCrownWidth / 2, -treeTrunkHeight);
-  ctx.lineTo(0, -(treeTrunkHeight + treeCrownHeight));
-  ctx.lineTo(treeCrownWidth / 2, -treeTrunkHeight);
-  ctx.fillStyle = color;
-  ctx.fill();
+//   // Draw crown
+//   ctx.beginPath();
+//   ctx.moveTo(-treeCrownWidth / 2, -treeTrunkHeight);
+//   ctx.lineTo(0, -(treeTrunkHeight + treeCrownHeight));
+//   ctx.lineTo(treeCrownWidth / 2, -treeTrunkHeight);
+//   ctx.fillStyle = color;
+//   ctx.fill();
 
-  ctx.restore();
-}
+//   ctx.restore();
+// }
 
 function getHillY(windowX, baseHeight, amplitude, stretch) {
   const sineBaseY = window.innerHeight - baseHeight;

@@ -16,6 +16,9 @@ const Menu = props => {
 
     React.createElement("li", null, 
     React.createElement("a", { href: "projects.html", onClick: props.toggleMenu }, "PORTFOLIO")), 
+
+    // React.createElement("li", null, 
+    // React.createElement("a", { href: "surprise.html", onClick: props.toggleMenu }, "SURPRISE")), 
 ), 
 
 
@@ -178,6 +181,22 @@ const Projects = props => {
   
   
 	  React.createElement("p", null, "Randomly picks a tarot card for you.")), 
+
+
+
+
+
+    React.createElement(Project, {
+      title: "Stick Hero",
+      img: 'https://play-lh.googleusercontent.com/Ph8XvfIqCZNMBH7ltkulP-iqL4OcmSKArZTj99EVhPSXvaIfEotwVQ8Rt-OfNBou3_8B',
+      tech: "js html css",
+      link: 'projects/stick.html',
+      repo: "projects/stick-code.html" }, 
+    
+      React.createElement("small", null, "Built using JavaScript, HTML, and CSS."), 
+    
+    
+      React.createElement("p", null, "Recreation of the IOS Stick Hero game.")), 
 	
 
 
@@ -252,10 +271,7 @@ class App extends React.Component {constructor(...args) {super(...args);_defineP
       React.createElement(Menu, { toggleMenu: this.toggleMenu, showMenu: this.state.menuState }), 
       React.createElement(Nav, { toggleMenu: this.toggleMenu, showMenu: this.state.menuState }), 
       React.createElement(Header, null), 
-    //   React.createElement(About, null), 
-      React.createElement(Projects, null), 
-    //   React.createElement(Contact, null), 
-    //   React.createElement(Footer, null)
+      React.createElement(Projects, null)
       ));
 
 

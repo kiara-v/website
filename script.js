@@ -47,9 +47,9 @@ const Nav = props => {
     React.createElement(React.Fragment, null, 
     React.createElement("nav", { id: "navbar" }, 
     React.createElement("div", { className: "nav-wrapper" }, 
-    React.createElement("p", { className: "brand" }, "kiara", 
+    React.createElement("p", { className: "brand", href: "index.html"}, "kiara", 
 
-    React.createElement("strong", null, "vong")), 
+    React.createElement("strong", { href: "index.html"}, "vong")), 
 
     React.createElement("a", {
       onClick: props.toggleMenu,
@@ -62,245 +62,6 @@ const Nav = props => {
 
 
 };
-
-
-
-/***********************
-  Header Component
- ***********************/
-
-const Header = props => {
-  return (
-    React.createElement("header", { id: "welcome-section" }, 
-    React.createElement("div", { className: "forest" }), 
-    React.createElement("div", { className: "silhouette" }), 
-    React.createElement("div", { className: "moon" }), 
-    React.createElement("div", { className: "container" }, 
-    React.createElement("h1", null, 
-    React.createElement("span", { className: "line" }, "I do"), 
-    React.createElement("span", { className: "line" }, "frontend design"), 
-    React.createElement("span", { className: "line" }, 
-    React.createElement("span", { className: "color" }, "&"), " code.")), 
-
-
-    React.createElement("div", { className: "buttons" }, 
-    React.createElement("a", { href: "projects.html" }, "my portfolio"), 
-    React.createElement("a", { href: "#contact", className: "cta" }, "get in touch")))));
-
-
-
-
-
-
-};
-
-
-/***********************
-  About Component
- ***********************/
-
-const About = props => {
-  return (
-    React.createElement("section", { id: "about" }, 
-      React.createElement("div", { className: "wrapper" }, 
-        React.createElement("article", null, 
-          React.createElement("div", { className: "title" }, 
-            React.createElement("h3", null, "Who's this girl?"), 
-              React.createElement("p", { className: "separator" })
-    ), 
-
-    React.createElement("div", { className: "desc full" }, 
-      React.createElement("h4", { className: "subtitle" }, "My name is Kiara."), 
-        React.createElement("p", null, "I am a junior majoring in Computer Science and Applied Math at Brown University."), 
-          React.createElement("p", null, "I really enjoy learning new things as well as making things pretty and easy to use. I also love design, a hobby I'm taking along since I did yearbook for 6 years. Oh, and frozen strawberries and coconut milk; I have a passion for frozen strawberries and coconut milk!")
-    ))))
-
-
-  );
-
-
-
-
-
-
-
-
-};
-
-
-/***********************
-  Project Component
- ***********************/
-
-const Project = props => {
-  const tech = {
-    css: 'fab fa-css3-alt',
-    js: 'fab fa-js-square',
-    react: 'fab fa-react',
-    html: 'fab fa-html5',
-    py: 'fab fa-python' };
-
-
-  const link = props.link || 'http://';
-  const repo = props.repo || 'http://';
-
-  return (
-    React.createElement("div", { className: "project" }, 
-    React.createElement("a", { className: "project-link", href: link, target: "_blank", rel: "noopener noreferrer" }, 
-    React.createElement("img", { className: "project-image", src: props.img, alt: 'Screenshot of ' + props.title })), 
-
-    React.createElement("div", { className: "project-details" }, 
-    React.createElement("div", { className: "project-tile" }, 
-    React.createElement("p", { className: "icons" },
-    props.tech.split(' ').map((t) => 
-    React.createElement("i", { className: tech[t], key: t }))),
-
-
-    props.title, ' '),
-
-    props.children, 
-    React.createElement("div", { className: "buttons" }, 
-    React.createElement("a", { href: repo, target: "_blank", rel: "noopener noreferrer" }, "Code Snippet ", 
-    React.createElement("i", { className: "fas fa-external-link-alt" })), 
-
-    React.createElement("a", { href: link, target: "_blank", rel: "noopener noreferrer" }, "Try it Live ", 
-    React.createElement("i", { className: "fas fa-external-link-alt" }))))));
-
-
-
-
-
-};
-
-
-
-/***********************
-  Projects Component
- ***********************/
-
-const Projects = props => {
-  return (
-    React.createElement("section", { id: "projects" }, 
-    React.createElement("div", { className: "projects-container" }, 
-    React.createElement("div", { className: "heading" }, 
-    React.createElement("h3", { className: "title" }, "My Works"), 
-    React.createElement("p", { className: "separator" })), 
-
-
-
-    React.createElement("div", { className: "projects-wrapper" }, 
-    
-    React.createElement(Project, {
-      title: "Dinosaur Game",
-      img: 'projects/img/dinosaur.jpg',
-      tech: "js css html",
-      link: 'projects/dinosaur.html',
-      repo: "projects/dinosaur-code.html" }, 
-
-    React.createElement("small", null, "Built using HTML, CSS, and JavaScript."), 
-
-
-    React.createElement("p", null, "This is a recreation of the no internet dinosaur game by google.")), 
-
-
-
-    React.createElement(Project, {
-      title: "Hotdog - Not Hotdog",
-      img: 'projects/img/hotdog.png',
-      tech: "py html css",
-      link: 'http://kiaravong.pythonanywhere.com/',
-      repo: "projects/hotdog-code.html" }, 
-
-    React.createElement("small", null, "Built using Python, HTML, and CSS."), 
-
-
-    React.createElement("p", null, "Inspired by HBO's Silicon Valley. Uses a VGG16 neural network to predict whether an image is a hotdog or not.")), 
-
-
-
-
-    React.createElement(Project, {
-      title: "Hotdog - Not Hotdog",
-      img: 'projects/img/hotdog.png',
-      tech: "py html css",
-      link: 'http://kiaravong.pythonanywhere.com/',
-      repo: "projects/hotdog-code.html" }, 
-
-    React.createElement("small", null, "Built using Python, HTML, and CSS."), 
-
-
-    React.createElement("p", null, "Inspired by HBO's Silicon Valley. Uses a VGG16 neural network to predict whether an image is a hotdog or not.")), 
-
-
-))));
-
-
-
-
-
-
-
-};
-
-
-
-/***********************
-  Contact Component
- ***********************/
-
-const Contact = props => {
-  return (
-    React.createElement("section", { id: "contact" }, 
-    React.createElement("div", { className: "container" }, 
-    React.createElement("div", { className: "heading-wrapper" }, 
-    React.createElement("div", { className: "heading" }, 
-    React.createElement("p", { className: "title" }, "Want to ", 
-    React.createElement("br", null), "contact me?"), 
-
-
-    React.createElement("p", { className: "separator" }), 
-    React.createElement("p", { className: "subtitle" }, "Please, send an email to ",
-    '', 
-    React.createElement("span", { className: "mail" }, "kiara_vong", 
-
-    React.createElement("i", { className: "fas fa-at at" }), "brown.edu"), ":")), 
-
-
-
-    React.createElement(SocialLinks, null)),
-    React.createElement("div", { className: "buttons" }, 
-    React.createElement("a", { href: "mailto:kiara_vong@brown.edu", className: "cta" }, "click here to email"))
-    // React.createElement("form", { id: "contact-form", action: "#" }, 
-    // React.createElement("input", { placeholder: "Name", name: "name", type: "text", required: true }), 
-    // React.createElement("input", { placeholder: "Email", name: "email", type: "email", required: true }), 
-    // React.createElement("textarea", { placeholder: "Message", type: "text", name: "message" }), 
-    // React.createElement("input", { className: "button", id: "submit", value: "Submit", type: "submit" }))
-  )));
-
-
-
-
-};
-
-
-
-
-/***********************
-  Footer Component
- ***********************/
-
-const Footer = props => {
-  return (
-    React.createElement("footer", null, 
-    React.createElement("div", { className: "wrapper" }, 
-    React.createElement("h3", null, "THANKS FOR VISITING"), 
-    React.createElement("p", null, "\xA9 ", new Date().getFullYear(), " Kiara Vong."), 
-    React.createElement(SocialLinks, null))));
-
-
-
-};
-
 
 
 
@@ -359,12 +120,7 @@ class App extends React.Component {constructor(...args) {super(...args);_defineP
     return (
       React.createElement(React.Fragment, null, 
       React.createElement(Menu, { toggleMenu: this.toggleMenu, showMenu: this.state.menuState }), 
-      React.createElement(Nav, { toggleMenu: this.toggleMenu, showMenu: this.state.menuState }), 
-      React.createElement(Header, null), 
-      React.createElement(About, null), 
-      // React.createElement(Projects, null), 
-      React.createElement(Contact, null), 
-      React.createElement(Footer, null)
+      React.createElement(Nav, { toggleMenu: this.toggleMenu, showMenu: this.state.menuState })
       ));
 
 
@@ -411,4 +167,4 @@ class App extends React.Component {constructor(...args) {super(...args);_defineP
 
 
 
-ReactDOM.render( React.createElement(App, null), document.getElementById('app'));
+ReactDOM.render( React.createElement(App, null), document.getElementById('menu'));
