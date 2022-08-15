@@ -1,0 +1,102 @@
+/* Background  */
+.bg-obj {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #df9aff;
+  }
+
+/* Car  */
+.car-obj {
+  position: absolute;
+  top: calc(50% + 5px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50px 0;
+  transition: all 0.4s ease;
+}
+
+/* Events  */
+.car-obj.on {
+  transform: translate(-50%, -50%) rotate(-25deg);
+}
+
+.road-object {
+  width: 40%;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.41);
+  position: absolute;
+  top: calc(50% + 52px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 8px 15px 1px #000000;
+}
+
+.streetlgiht {
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  transform: translate(100%, -50%);
+  animation: moveBack 2s ease infinite;
+}
+
+.buildings {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: 50%;
+  transform: translate(100%, -50%);
+  animation: moveBack 4s ease infinite;
+}
+
+.canvas {
+  width: 40%;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes moveBack {
+  100% {
+    transform: translate(-150%, -50%);
+  }
+}
+
+#tfront {
+  animation: frontwheelanim 1s ease infinite;
+}
+
+#tback {
+  animation: backwheelanim 1s ease 0.2s infinite;
+}
+
+@keyframes frontwheelanim {
+  80% {
+    transform: matrix(4.0764314, 0, 0, 4.0764314, -254.34846, -309.01206);
+  }
+}
+
+@keyframes backwheelanim {
+  80% {
+    transform: matrix(4.0764314, 0, 0, 4.0764314, -278.31911, -308.68738);
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  body {
+    background:#000000;
+  }
+}
+
+@media screen and (min-width: 1620px) {
+  .canvas {
+    width: 500px;
+  }
+  .road-object {
+    width: 500px;
+  }
+}

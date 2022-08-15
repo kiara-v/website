@@ -1,0 +1,381 @@
+@import "https://unpkg.com/augmented-ui@2.0.0/aug-core.min.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  --palletHR: 0deg;
+  --pallet1: #131323;
+  --pallet2: #551512;
+  --pallet3: #FF4E3B;
+  --pallet4: #00b3ff;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px 0.3vh,
+    rgba(0, 0, 0, 0.25) 0.3vh 0.5vh
+  ), radial-gradient(
+    at center top,
+    var(--pallet3),
+    transparent 75%
+  ) center -50vh / 200vw 150vh no-repeat fixed, var(--pallet1);
+}
+body[data-theme-id="1"] {
+  /* Johnny Silverhand */
+  --palletHR: 75deg;
+  --pallet1: #0B0D33;
+  --pallet2: #1f4197;
+  --pallet3: #3e7ce5;
+  --pallet4: #D4E800;
+}
+body[data-theme-id="2"] {
+  /* Jane Ori */
+  --palletHR: 310deg;
+  --pallet1: #1b0036;
+  --pallet2: #5e0094;
+  --pallet3: #CE7AFF;
+  --pallet4: #FB00C3;
+}
+
+#card-23,
+#card-24 {
+  filter: hue-rotate(var(--palletHR));
+}
+
+h1 {
+  color: var(--pallet4);
+  --ts: 0 0 2vw var(--pallet1);
+  text-shadow: var(--ts), var(--ts), var(--ts);
+  text-align: center;
+  font-size: 3vw;
+  font-weight: bold;
+  margin-top: 2vw;
+}
+
+[role="group"] {
+  display: inline-grid;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2vw;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vw;
+}
+[role="group"] [role="radio"] {
+  background: linear-gradient(
+    to right,
+    transparent 0px 1vw,
+    currentColor 1vw 1.125vw,
+    transparent 1.125vw
+  );
+  color: var(--pallet3);
+  border: none;
+  outline: none;
+  padding: 2.5vw 2vw;
+  padding-left: 3.5vw;
+  font-size: 2vw;
+  --aug-border: initial;
+  --aug-border-all: 0.125vw;
+  --aug-inlay: initial;
+  --aug-inlay-all: 0px;
+  --aug-inlay-bg: var(--pallet1);
+  --aug-inlay-opacity: 0.75;
+  --aug-clip-tr1: initial;
+  --aug-clip-br1: initial;
+  --aug-tr1: 0.5vw;
+  --aug-tr-inset2: 70%;
+  --aug-tr1-alt-join-out: initial;
+  --aug-br1: 1.5vw;
+  --aug-rect-l1: initial;
+  --aug-rect-l2: initial;
+  --aug-l1: 0.25vw;
+  --aug-l2: 0.25vw;
+  --aug-l-extend1: 1vw;
+  --aug-l-center: 70%;
+}
+[role="group"] [role="radio"]:is(
+  :hover,
+  :active,
+  :focus,
+  [aria-checked="true"]
+) {
+  --aug-border-bg: var(--pallet4);
+  color: var(--pallet4);
+}
+[role="group"] [role="radio"]:is(
+  :hover,
+  :active,
+  :focus
+) {
+  --aug-inlay-bg: radial-gradient(
+    var(--pallet1),
+    var(--pallet4) 200%
+  );
+}
+
+#major-arcana-2077 {
+  width: 90vw;
+  margin: 5vw auto;
+  margin-top: 3vw;
+  display: grid;
+  grid-template-columns: repeat(6, calc(100% / 7));
+  gap: calc(100% / 7 / 7);
+  justify-content: space-between;
+}
+#major-arcana-2077 figure {
+  position: relative;
+  cursor: pointer;
+  font-size: 0px;
+  --aug-border: initial;
+  --aug-border-bg: var(--pallet4);
+  --aug-border-all: 0.25vw;
+  --aug-clip-tl1: initial;
+  --aug-tl1: 0px;
+  --aug-clip-br1: initial;
+  --aug-br1: 1vw;
+  --aug-rect-b1: initial;
+  --aug-b1: 0px;
+  --aug-b-center: 6.5vw;
+  overflow: hidden;
+  opacity: 0.75;
+}
+#major-arcana-2077 figure:hover {
+  --aug-tl1: 0.25vw;
+  --aug-tl-inset2: 2vw;
+  --aug-tl1-alt-join-out: initial;
+  --aug-br1: 2vw;
+  --aug-b1-width: 0.25vw;
+  --aug-b1-height: 2.25vw;
+  width: 108%;
+  margin-right: -8%;
+  padding-right: 8%;
+  opacity: 1;
+}
+#major-arcana-2077 img {
+  width: calc(100% + 0.25vw);
+  margin: -0.125vw;
+}
+#major-arcana-2077 figure:hover .decor {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    var(--pallet4) 0 0.5vw,
+    transparent 0.5vw calc(100% - 1.25vw),
+    var(--pallet4) calc(100% - 1.25vw) 100%
+  );
+}
+#major-arcana-2077 figcaption {
+  font-size: 1.25vw;
+  padding: 0.5vw 0;
+  white-space: nowrap;
+  text-align: center;
+  position: absolute;
+  left: 2%;
+  width: 96%;
+  bottom: 33%;
+  z-index: 2;
+  opacity: 0;
+  background: var(--pallet1);
+  color: var(--pallet3);
+  --aug-clip-br1: initial;
+  --aug-br1: 1vw;
+  --aug-border: initial;
+  --aug-border-all: 0.125vw;
+  --aug-border-left: 0.5vw;
+  --aug-border-bg: var(--pallet2);
+  /* safari hasn't implemented the fixed IACVT Spec: https://github.com/w3c/csswg-drafts/pull/6006 */
+  --aug-tl1: 0px;
+  --aug-tl-inset2: 0px;
+  --aug-b1: 0px;
+}
+
+#major-arcana-2077 figure:hover figcaption {
+  opacity: 1;
+}
+
+#major-arcana-2077 {
+  --3d: initial;
+  perspective: var(--3d) 2077px;
+}
+#major-arcana-2077 > * {
+  transform-style: var(--3d) preserve-3d;
+}
+#major-arcana-2077 > :nth-child(6n+1) {
+  transform: var(--3d) translateZ(15vw) rotateY(15deg);
+}
+#major-arcana-2077 > :nth-child(6n+2) {
+  transform: var(--3d) translateZ(10vw) rotateY(10deg);
+}
+#major-arcana-2077 > :nth-child(6n+3) {
+  transform: var(--3d) translateZ(5vw) rotateY(5deg);
+}
+#major-arcana-2077 > :nth-child(6n+4) {
+  transform: var(--3d) translateZ(5vw) rotateY(-5deg);
+}
+#major-arcana-2077 > :nth-child(6n+5) {
+  transform: var(--3d) translateZ(10vw) rotateY(-10deg);
+}
+#major-arcana-2077 > :nth-child(6n+6) {
+  transform: var(--3d) translateZ(15vw) rotateY(-15deg);
+}
+
+#card-II,
+#card-III,
+#card-IV,
+#card-VI,
+#card-VIII,
+#card-XI,
+#card-XII,
+#card-XIV,
+#card-XV,
+#card-XVI,
+#card-XVII,
+#card-XVIII,
+#card-XIX,
+#card-XX,
+#card-XXI {
+  transform: scaleX(-1);
+}
+
+#modalbg {
+  position: fixed;
+  inset: 0;
+  border: none;
+  background: linear-gradient(var(--pallet2) -20%, var(--pallet1));
+  opacity: 0.9;
+}
+
+#window-pane {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90vw, 750px, 120vh);
+  display: grid;
+  grid-template-columns: 6% min(40vh, 35%) 1fr;
+  padding-bottom: 4vw;
+  filter: drop-shadow(0 0 2vw var(--pallet1));
+}
+
+#window-pane .handle {
+  --aug-border: initial;
+  --aug-border-all: 0.125vw;
+  --aug-border-bg: var(--pallet3);
+  --aug-clip-tl1: initial;
+  --aug-tl1: 1.5vw;
+  --aug-clip-r1: initial;
+  --aug-clip-r2: initial;
+  --aug-r-extend1: 70%;
+  --aug-r1: 0.25vw;
+  --aug-r2: 0.25vw;
+  --aug-clip-bl1: initial;
+  --aug-bl-inset2: 1.5vw;
+  --aug-bl1-alt-join-out: initial;
+  --aug-bl1: 1vw;
+  --aug-inlay: initial;
+  --aug-inlay-all: 0px;
+  --aug-inlay-bg: var(--pallet2);
+  --aug-inlay-opacity: 0.5;
+}
+
+.handle-details {
+  display: flex;
+  white-space: nowrap;
+  border: 0.125vw solid var(--pallet3);
+  position: absolute;
+  top: 95%;
+  left: min(0.75vw, 1.25vh);
+  transform-origin: left top;
+  transform: rotateZ(-90deg);
+  opacity: 0.75;
+}
+.handle-details a {
+  font-size: min(0.667vw, 1vh);
+  color: var(--pallet3);
+  text-decoration: none;
+  padding-top: 0.125vw;
+  padding-left: 0.5vw;
+  padding-right: 0.75vw;
+  padding-bottom: min(0.667vw, 1vh);
+}
+.handle-details a:first-child {
+  border-right: inherit;
+}
+
+#window-pane .img-frame {
+  position: relative;
+  --aug-border: initial;
+  --aug-border-all: 0.124vw;
+  --aug-border-bg: var(--pallet3);
+  font-size: 0;
+}
+
+#window-pane img {
+  width: 100%;
+  max-height: 90vh;
+}
+
+#window-pane .details {
+  background: linear-gradient(
+    to right,
+    transparent 0 1vw,
+    var(--pallet3) 1vw 1.125vw,
+    transparent 1.125vw
+  ), var(--pallet1);
+  margin-left: 2%;
+  margin-top: -0.25vw;
+  margin-bottom: max(-8vh, -4vw);
+  padding: min(8vh, 4vw) 5vw;
+  --aug-border: initial;
+  --aug-border-all: 0.125vw;
+  --aug-border-bg: var(--pallet3);
+  --aug-clip-tr1: initial;
+  --aug-tr1: 0.25vw;
+  --aug-tr-inset2: 85%;
+  --aug-clip-br1: initial;
+  --aug-br1: 1vw;
+  --aug-rect-l1: initial;
+  --aug-rect-l2: initial;
+  --aug-l1: 0.125vw;
+  --aug-l2: 0.125vw;
+  --aug-l-extend1: 1vw;
+  --aug-l-center: 97%;
+}
+
+#modal-title {
+  color: var(--pallet4);
+  font-weight: normal;
+  margin-bottom: 4vw;
+  text-transform: uppercase;
+  font-size: min(3vw, 4vh, 20px);
+}
+
+#modal-desc {
+  color: var(--pallet3);
+  text-shadow: 0 0 1vw var(--pallet2);
+  font-size: min(18px, 2.25vw, 3vh);
+}
+#modal-desc a {
+  color: var(--pallet4);
+}
+
+#window-pane .details button {
+  position: absolute;
+  right: 1vw;
+  top: 1.25vw;
+  padding: 1vw;
+  font-weight: bold;
+  color: var(--pallet2);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#modalbg[aria-hidden="true"],
+#window-pane[aria-hidden="true"] {
+  display: none;
+}
