@@ -1148,78 +1148,6 @@ a:active {
   font-size: 1.4rem;
 }
 
-#contact-form {
-  margin-top: 1rem;
-}
-
-input, textarea {
-  border: none;
-  padding: 1rem;
-  font-family: 'Overlock', Arial, Helvetica, sans-serif;
-  width: 100%;
-  height: 40%;
-  transition: 200ms;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="text"]:not(output):not(:focus),
-input[type="email"]:not(output):not(:focus),
-textarea {
-  border-bottom: 1px solid #fafafa;
-  background: transparent;
-  color: #fafafa;
-  font-size: 1.8rem;
-  box-shadow: none;
-  outline: none;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="text"]:not(output):focus,
-input[type="email"]:not(output):focus,
-textarea:focus {
-  border-bottom: 1px solid #f30000;
-}
-
-input[type="submit"] {
-  background: #f30000;
-  color: #fafafa;
-  margin-top: 1rem;
-  width: auto;
-  float: right;
-}
-
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-  cursor: pointer;
-  color: #333;
-  background: #fafafa;
-}
-
-::-moz-placeholder {
-  color: #fafafa;
-}
-
-:-ms-input-placeholder {
-  color: #fafafa;
-}
-
-::placeholder {
-  color: #fafafa;
-}
-
-/** Email to avoid spam **/
-.mail {
-  display: inline-block;
-  font-style: italic;
-}
-
-.mail .at, .mail .dot {
-  font-size: .9rem;
-  margin: 0 .1rem;
-  color: #f30000;
-}
 
 
 @media only screen and (max-width: 1149px) {
@@ -1288,6 +1216,9 @@ footer .wrapper {
 }
 #contact .container .buttons a {
   padding: 1%;
+  font-weight: bold;
+  font-size: 1rem;
+}
 }
 #contact .container .buttons a:hover,
 #contact .container .buttons a:active {
@@ -1301,6 +1232,7 @@ footer .wrapper {
   background: #f30000;
   border: 1px solid transparent;
   color: #fafafa;
+  padding: 2% 5%;
 }
 
 #contact .container .buttons a.cta:hover,
