@@ -397,6 +397,8 @@ a:active {
   justify-content: center;
   background-color: #181d23;
   fill: #181d23;
+  min-height: 70px;
+  height: 10vh;
 }
 
 #navbar.bg-active {
