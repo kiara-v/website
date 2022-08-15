@@ -112,7 +112,7 @@ const About = props => {
     React.createElement("div", { className: "desc full" }, 
       React.createElement("h4", { className: "subtitle" }, "My name is Kiara."), 
         React.createElement("p", null, "I am a junior majoring in Computer Science and Applied Math at Brown University."), 
-          React.createElement("p", null, "I really enjoy solving problems as well as making things pretty and easy to use. I can't stop learning new things; the more, the better. I also love photography, a hobby I'm taking along since the good old film cameras. Oh, and rice with milk; I have a passion for rice with milk!")
+          React.createElement("p", null, "I really enjoy learning new things as well as making things pretty and easy to use. I also love design, a hobby I'm taking along since I did yearbook for 6 years. Oh, and frozen strawberries and coconut milk; I have a passion for frozen strawberries and coconut milk!")
     ))))
 
 
