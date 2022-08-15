@@ -34,7 +34,7 @@ path, polygon, circle, rect {
   top: 100%;
   width: 112%;
   margin-left: -6%;
-  background: #a22f2f;
+  background: #ff0000;
 }
 
 .cat {
@@ -182,7 +182,7 @@ path, polygon, circle, rect {
 .option-wrapper {
   display: flex;
   margin: 3em auto;
-  background: #a22f2f;
+  background: #ff0000;
   border-radius: 4px;
   padding: 5px;
   max-width: 300px;

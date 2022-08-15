@@ -1,13 +1,13 @@
 .outer_wrapper {
   position: absolute;
   width: 100%;
-  height: 500px;
+  height: 600px;
   /* overflow: hidden; */
 }
 
 .wrapper {
   position: absolute;
-  height: calc(500px - 150px);
+  height: calc(600px - 150px);
   width: 100%;
   background-color: #fafafa;
   max-height: 400px;
