@@ -912,13 +912,15 @@ a:active {
  *****************/
 
 #projects {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   font-size: 1.4rem;
   position: relative;
   background: #f0f0f0;
   background: linear-gradient(215deg, #f0f0f0 0%,#fafafa 100%);
   margin-top: -10rem;
   z-index: 1;
+  height: 100%;
+  min-height: 20vh;
 }
 
 #projects a,
