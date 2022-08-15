@@ -47,7 +47,7 @@ function init() {
   }
 
   const headMotion = () =>{
-    pos.y > (wrapper.clientHeight - 100) ?
+    pos.y > (wrapper.clientHeight - 150) ?
       head.style.top = '-15px'
       :
       head.style.top = '-30px'
@@ -55,7 +55,7 @@ function init() {
 
   const jump = () =>{
     catWrapper.classList.remove('jump')
-    if (pos.y < (wrapper.clientHeight + 100)) {
+    if (pos.y < (wrapper.clientHeight + 150)) {
       setTimeout(()=>{
         catWrapper.classList.add('jump')
       },100)
