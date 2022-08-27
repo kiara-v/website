@@ -50,10 +50,12 @@ const Nav = props => {
   return (
     React.createElement(React.Fragment, null, 
     React.createElement("nav", { id: "navbar" }, 
-    React.createElement("div", { className: "nav-wrapper" }, 
-    React.createElement("p", { className: "brand", href: "index.html"}, "kiara", 
-
-    React.createElement("strong", { href: "index.html"}, "vong")), 
+      React.createElement("div", { className: "nav-wrapper"}, 
+        React.createElement("a", { href: "index.html" }, "kiaravong",
+          // React.createElement("p", { className: "brand"}, "kiara", 
+          // React.createElement("strong", {}, "vong"))
+        ),
+    
 
     React.createElement("a", {
       onClick: props.toggleMenu,

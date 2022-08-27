@@ -40,10 +40,9 @@ const Nav = props => {
   return (
     React.createElement(React.Fragment, null, 
     React.createElement("nav", { id: "navbar" }, 
-    React.createElement("div", { className: "nav-wrapper" }, 
-    React.createElement("p", { className: "brand" }, "kiara", 
-
-    React.createElement("strong", null, "vong")), 
+    React.createElement("div", { className: "nav-wrapper" },
+    React.createElement("a", { href: "index.html", width: '10px', height: '10px'}, "kiaravong",
+    ),
 
     React.createElement("a", {
       onClick: props.toggleMenu,
@@ -173,7 +172,7 @@ const Projects = props => {
     React.createElement("p", null, "This is a recreation of the no internet dinosaur game by google.")), 
 
 
-    
+
 
     React.createElement(Project, {
       title: "Tarot Cards",
