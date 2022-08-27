@@ -74,7 +74,8 @@ const Project = props => {
     js: 'fab fa-js-square',
     react: 'fab fa-react',
     html: 'fab fa-html5',
-    py: 'fab fa-python' };
+    py: 'fab fa-python' ,
+    java: 'fab fa-java',};
 
 
   const link = props.link || 'http://';
@@ -125,18 +126,27 @@ const Projects = props => {
 
 
     React.createElement("div", { className: "projects-wrapper" }, 
-    
+
     React.createElement(Project, {
-      title: "Dinosaur Game",
-      img: 'projects/img/dinosaur.jpg',
-      tech: "js css html",
-      link: 'projects/dinosaur.html',
-      repo: "projects/dinosaur-code.html" }, 
+      title: "Pacman",
+      img: 'https://store-images.s-microsoft.com/image/apps.62763.14199964686811663.f257cbf1-42a5-4d4a-9087-aa31c6a47068.08239ffb-0d9a-4cb1-8fd0-c3b414a9b26c?mode=scale&q=90&h=270&w=270&background=%230078D7',
+      tech: "java",
+      link: 'projects/pacman.html',
+      repo: "projects/pacman-code.html" }, 
 
-    React.createElement("small", null, "Built using HTML, CSS, and JavaScript."), 
+    React.createElement("small", null, "Built using JavaFx."), 
+    React.createElement("p", null, "This is a recreation of the class game Pacman.")), 
 
 
-    React.createElement("p", null, "This is a recreation of the no internet dinosaur game by google.")), 
+    React.createElement(Project, {
+      title: "Tetris",
+      img: 'https://img.freepik.com/premium-vector/game-tetris-square-template_6343-27.jpg',
+      tech: "java",
+      link: 'projects/tetris.html',
+      repo: "projects/tetris-code.html" }, 
+
+    React.createElement("small", null, "Built using JavaFx."), 
+    React.createElement("p", null, "This is a recreation of the class game Tetris.")), 
 
 
 
@@ -148,12 +158,22 @@ const Projects = props => {
       repo: "projects/hotdog-code.html" }, 
 
     React.createElement("small", null, "Built using Python, HTML, and CSS."), 
-
-
     React.createElement("p", null, "Uses VGG16 to predict whether an image is a hotdog or not.")), 
 
 
 
+    React.createElement(Project, {
+      title: "Dinosaur Game",
+      img: 'projects/img/dinosaur.jpg',
+      tech: "js css html",
+      link: 'projects/dinosaur.html',
+      repo: "projects/dinosaur-code.html" }, 
+
+    React.createElement("small", null, "Built using HTML, CSS, and JavaScript."), 
+    React.createElement("p", null, "This is a recreation of the no internet dinosaur game by google.")), 
+
+
+    
 
     React.createElement(Project, {
       title: "Tarot Cards",
@@ -163,8 +183,6 @@ const Projects = props => {
       repo: "projects/tarot-code.html" }, 
 
     React.createElement("small", null, "Built using JavaScript, HTML, and CSS."), 
-
-
     React.createElement("p", null, "Randomly picks a tarot card for you.")), 
 
 
@@ -181,8 +199,6 @@ const Projects = props => {
 		repo: "projects/pi-code.html" }, 
   
 	  React.createElement("small", null, "Built using JavaScript, HTML, and CSS."), 
-  
-  
 	  React.createElement("p", null, "Randomly picks a tarot card for you.")), 
 
 
@@ -191,14 +207,12 @@ const Projects = props => {
 
     React.createElement(Project, {
       title: "Stick Hero",
-      img: 'https://play-lh.googleusercontent.com/Ph8XvfIqCZNMBH7ltkulP-iqL4OcmSKArZTj99EVhPSXvaIfEotwVQ8Rt-OfNBou3_8B',
+      img: 'projects/img/stick.png',
       tech: "js html css",
       link: 'projects/stick.html',
       repo: "projects/stick-code.html" }, 
     
       React.createElement("small", null, "Built using JavaScript, HTML, and CSS."), 
-    
-    
       React.createElement("p", null, "Recreation of the IOS Stick Hero game.")), 
 	
 
