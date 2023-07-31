@@ -12,7 +12,7 @@ const Menu = props => {
     React.createElement("div", { className: "menu-items" }, 
     React.createElement("ul", null, 
     React.createElement("li", null, 
-    React.createElement("a", { href: "/", onClick: props.toggleMenu }, "HOME")), 
+    React.createElement("a", { href: "", onClick: props.toggleMenu }, "HOME")), 
 
     React.createElement("li", null, 
     React.createElement("a", { href: "resume", onClick: props.toggleMenu }, "RESUME")), 
