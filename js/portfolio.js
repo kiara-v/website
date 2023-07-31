@@ -185,11 +185,6 @@ const Projects = props => {
     React.createElement("p", null, "Randomly picks a tarot card for you.")), 
 
 
-
-
-
-
-
 	React.createElement(Project, {
 		title: "PI Game",
 		img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRI-RzdK1BRIjh-lZKXqjD3Bl195kF85Vu6w&usqp=CAU',
@@ -201,9 +196,6 @@ const Projects = props => {
 	  React.createElement("p", null, "Randomly picks a tarot card for you.")), 
 
 
-
-
-
     React.createElement(Project, {
       title: "Stick Hero",
       img: 'projects/img/stick.png',
@@ -213,8 +205,37 @@ const Projects = props => {
     
       React.createElement("small", null, "Built using JavaScript, HTML, and CSS."), 
       React.createElement("p", null, "Recreation of the IOS Stick Hero game.")), 
-	
 
+      React.createElement(Project, {
+        title: "(bad) AI Chess",
+        img: 'https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/PedroPinhata/phpZTvydV.png',
+        tech: "js css html",
+        link: 'projects/chess',
+        repo: "projects/chess-code" }, 
+  
+      React.createElement("small", null, "Built using JavaScript, HTML, and CSS."), 
+      React.createElement("p", null, "This is a single-player chess game against a (not so great) AI.")), 
+
+      React.createElement(Project, {
+        title: "Platform Game",
+        img: 'https://www.google.com/search?q=javascript+platform+game&tbm=isch&ved=2ahUKEwi7qI3AybmAAxWPI1kFHfOLAAYQ2-cCegQIABAA&oq=javascript+platform+game&gs_lcp=CgNpbWcQAzIHCAAQGBCABDoHCAAQigUQQzoFCAAQgAQ6BggAEAcQHjoICAAQCBAHEB5Q8AFY3RpgvxtoAHAAeACAAYYBiAHaB5IBBDExLjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=P_3HZPuMI4_H5NoP85eCMA&rlz=1C1VDKB_enUS929US929#imgrc=CSUSWWjkUd0jRM',
+        tech: "js css html",
+        link: 'projects/platform',
+        repo: "projects/platform-code" }, 
+  
+      React.createElement("small", null, "Built using JavaScript, HTML, and CSS."), 
+      React.createElement("p", null, "This is a simple platform game, using arrow keys to move.")), 
+
+
+      React.createElement(Project, {
+        title: "Copycat",
+        img: 'https://www.google.com/search?q=javascript+platform+game&tbm=isch&ved=2ahUKEwi7qI3AybmAAxWPI1kFHfOLAAYQ2-cCegQIABAA&oq=javascript+platform+game&gs_lcp=CgNpbWcQAzIHCAAQGBCABDoHCAAQigUQQzoFCAAQgAQ6BggAEAcQHjoICAAQCBAHEB5Q8AFY3RpgvxtoAHAAeACAAYYBiAHaB5IBBDExLjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=P_3HZPuMI4_H5NoP85eCMA&rlz=1C1VDKB_enUS929US929#imgrc=CSUSWWjkUd0jRM',
+        tech: "js css html",
+        link: 'projects/copycat',
+        repo: "projects/copycat-code" }, 
+  
+      React.createElement("small", null, "Built using JavaScript, HTML, and CSS."), 
+      React.createElement("p", null, "Recreation of the Copycat game on Steam.")), 
 
 ))));
 
