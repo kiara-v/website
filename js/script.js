@@ -26,7 +26,7 @@ const Menu = props => {
 
 
     React.createElement("li", null, 
-    React.createElement("a", { href: "portfolio", onClick: props.toggleMenu }, "PORTFOLIO")), 
+    React.createElement("a", { href: "portoflio", onClick: props.toggleMenu }, "PORTFOLIO")), 
 
 
 

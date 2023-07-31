@@ -18,7 +18,7 @@ const Menu = props => {
     React.createElement("a", { href: "resume", onClick: props.toggleMenu }, "RESUME")), 
 
     React.createElement("li", null, 
-    React.createElement("a", { href: "portfolio", onClick: props.toggleMenu }, "PORTFOLIO")), 
+    React.createElement("a", { href: "projects", onClick: props.toggleMenu }, "PROJECTS")), 
 
     // React.createElement("li", null, 
     // React.createElement("a", { href: "surprise", onClick: props.toggleMenu }, "SURPRISE")), 
@@ -96,7 +96,7 @@ const Project = props => {
 
     props.children, 
     React.createElement("div", { className: "buttons" }, 
-    React.createElement("a", { href: repo, target: "_blank", rel: "noopener noreferrer" }, "Code Snippet ", 
+    React.createElement("a", { href: repo, target: "_blank", rel: "noopener noreferrer" }, "Code ", 
     React.createElement("i", { className: "fas fa-external-link-alt" })), 
 
     React.createElement("a", { href: link, target: "_blank", rel: "noopener noreferrer" }, "Try it Live ", 
@@ -218,7 +218,7 @@ const Projects = props => {
 
       React.createElement(Project, {
         title: "Platform Game",
-        img: 'https://www.google.com/search?q=javascript+platform+game&tbm=isch&ved=2ahUKEwi7qI3AybmAAxWPI1kFHfOLAAYQ2-cCegQIABAA&oq=javascript+platform+game&gs_lcp=CgNpbWcQAzIHCAAQGBCABDoHCAAQigUQQzoFCAAQgAQ6BggAEAcQHjoICAAQCBAHEB5Q8AFY3RpgvxtoAHAAeACAAYYBiAHaB5IBBDExLjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=P_3HZPuMI4_H5NoP85eCMA&rlz=1C1VDKB_enUS929US929#imgrc=CSUSWWjkUd0jRM',
+        img: 'https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/f4/d3ece0c30a4049997fa69d446bc46f/2DPlatformer-Logo.png?auto=format%2Ccompress&dpr=1',
         tech: "js css html",
         link: 'projects/platform',
         repo: "projects/platform-code" }, 
@@ -228,14 +228,14 @@ const Projects = props => {
 
 
       React.createElement(Project, {
-        title: "Copycat",
-        img: 'https://www.google.com/search?q=javascript+platform+game&tbm=isch&ved=2ahUKEwi7qI3AybmAAxWPI1kFHfOLAAYQ2-cCegQIABAA&oq=javascript+platform+game&gs_lcp=CgNpbWcQAzIHCAAQGBCABDoHCAAQigUQQzoFCAAQgAQ6BggAEAcQHjoICAAQCBAHEB5Q8AFY3RpgvxtoAHAAeACAAYYBiAHaB5IBBDExLjGYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=P_3HZPuMI4_H5NoP85eCMA&rlz=1C1VDKB_enUS929US929#imgrc=CSUSWWjkUd0jRM',
+        title: "CopyCat",
+        img: 'https://static.arcadespot.com/wp-content/uploads/2018/10/copycat-164x164.png',
         tech: "js css html",
         link: 'projects/copycat',
         repo: "projects/copycat-code" }, 
   
       React.createElement("small", null, "Built using JavaScript, HTML, and CSS."), 
-      React.createElement("p", null, "Recreation of the Copycat game on Steam.")), 
+      React.createElement("p", null, "Recreation of the CopyCat game on Steam.")), 
 
 ))));
 
