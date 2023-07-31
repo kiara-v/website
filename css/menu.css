@@ -13,7 +13,7 @@ html, body {
   height: 100%;
 }
 
-body {
+.menu-container {
   color: #252934;
   background: #fafafa;
   font-size: 62.5%;
@@ -28,8 +28,7 @@ a {
   transition: 200ms;
 }
 
-a:hover,
-a:active {
+a:hover, a:active {
   color: #f30000;
   text-decoration: none;
 }

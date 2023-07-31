@@ -14,4 +14,4 @@ Website showcases:
 * Hotdog - Not Hotdog (analyzes if an image is a hotdog or not)
 * Tarot Cards (randomly chooses a tarot card for your future)
 
-Run locally using ```npm install -g http-server``` and ```http-server``` or ```hs```.
+Run locally using ```npm install -g http-server``` and ```http-server``` or ```http-server -p 8080```.

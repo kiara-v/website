@@ -417,11 +417,11 @@
 
 /*****************
  *****************
-  PROJECTS STYLES
+  widget STYLES
  *****************
  *****************/
 
-#projects {
+#widget {
   /* min-height: 100vh; */
   font-size: 1.4rem;
   position: relative;
@@ -433,18 +433,18 @@
   min-height: 20vh;
 }
 
-#projects a,
-#projects a:visited {
+#widget a,
+#widget a:visited {
   color: #f30000;
 }
 
-#projects a:hover,
-#projects a:active {
+#widget a:hover,
+#widget a:active {
   color: #252934;
 }
 
 /* Container */
-#projects .projects-container {
+#widget .widget-container {
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
@@ -452,20 +452,20 @@
 }
 
 /* Heading */
-#projects .heading .title {
+#widget .heading .title {
   text-align: center;
   font-size: 2.4rem;
   line-height: 2.4rem;
 }
 
-#projects .heading .separator {
+#widget .heading .separator {
   background: #f30000;
   width: 150px;
   height: 2px;
   margin: 1rem auto;
 }
 
-#projects .heading .subtitle {
+#widget .heading .subtitle {
   font-size: 1.4rem;
   text-align: center;
   width: 70%;
