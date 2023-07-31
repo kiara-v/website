@@ -21,12 +21,12 @@ const Menu = props => {
     
 
     React.createElement("li", null, 
-    React.createElement("a", { href: "resume.html", onClick: props.toggleMenu }, "RESUME")), 
+    React.createElement("a", { href: "resume", onClick: props.toggleMenu }, "RESUME")), 
 
 
 
     React.createElement("li", null, 
-    React.createElement("a", { href: "portfolio.html", onClick: props.toggleMenu }, "PORTFOLIO")), 
+    React.createElement("a", { href: "portfolio", onClick: props.toggleMenu }, "PORTFOLIO")), 
 
 
 
@@ -51,7 +51,7 @@ const Nav = props => {
     React.createElement(React.Fragment, null, 
     React.createElement("nav", { id: "navbar" }, 
       React.createElement("div", { className: "nav-wrapper"}, 
-        React.createElement("a", { href: "index.html" }, "kiaravong",
+        React.createElement("a", { href: "index" }, "kiaravong",
           // React.createElement("p", { className: "brand"}, "kiara", 
           // React.createElement("strong", {}, "vong"))
         ),

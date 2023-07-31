@@ -12,16 +12,16 @@ const Menu = props => {
     React.createElement("div", { className: "menu-items" }, 
     React.createElement("ul", null, 
     React.createElement("li", null, 
-    React.createElement("a", { href: "index.html", onClick: props.toggleMenu }, "HOME")), 
+    React.createElement("a", { href: "index", onClick: props.toggleMenu }, "HOME")), 
 
     React.createElement("li", null, 
-    React.createElement("a", { href: "resume.html", onClick: props.toggleMenu }, "RESUME")), 
+    React.createElement("a", { href: "resume", onClick: props.toggleMenu }, "RESUME")), 
 
     React.createElement("li", null, 
-    React.createElement("a", { href: "portfolio.html", onClick: props.toggleMenu }, "PORTFOLIO")), 
+    React.createElement("a", { href: "portfolio", onClick: props.toggleMenu }, "PORTFOLIO")), 
 
     // React.createElement("li", null, 
-    // React.createElement("a", { href: "surprise.html", onClick: props.toggleMenu }, "SURPRISE")), 
+    // React.createElement("a", { href: "surprise", onClick: props.toggleMenu }, "SURPRISE")), 
 ), 
 
 
@@ -41,7 +41,7 @@ const Nav = props => {
     React.createElement(React.Fragment, null, 
     React.createElement("nav", { id: "navbar" }, 
     React.createElement("div", { className: "nav-wrapper" },
-    React.createElement("a", { href: "index.html", width: '10px', height: '10px'}, "kiaravong",
+    React.createElement("a", { href: "index", width: '10px', height: '10px'}, "kiaravong",
     ),
 
     React.createElement("a", {

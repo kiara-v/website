@@ -12,16 +12,16 @@ const Menu = props => {
     React.createElement("div", { className: "menu-items" }, 
     React.createElement("ul", null, 
     React.createElement("li", null, 
-    React.createElement("a", { href: "index.html", onClick: props.toggleMenu }, "HOME")), 
+    React.createElement("a", { href: "index", onClick: props.toggleMenu }, "HOME")), 
 
     React.createElement("li", null, 
-    React.createElement("a", { href: "resume.html", onClick: props.toggleMenu }, "RESUME")), 
+    React.createElement("a", { href: "resume", onClick: props.toggleMenu }, "RESUME")), 
 
     React.createElement("li", null, 
-    React.createElement("a", { href: "portfolio.html", onClick: props.toggleMenu }, "PORTFOLIO")), 
+    React.createElement("a", { href: "portfolio", onClick: props.toggleMenu }, "PORTFOLIO")), 
 
     // React.createElement("li", null, 
-    // React.createElement("a", { href: "surprise.html", onClick: props.toggleMenu }, "SURPRISE")), 
+    // React.createElement("a", { href: "surprise", onClick: props.toggleMenu }, "SURPRISE")), 
 ), 
 
 
@@ -41,7 +41,7 @@ const Nav = props => {
     React.createElement(React.Fragment, null, 
     React.createElement("nav", { id: "navbar" }, 
     React.createElement("div", { className: "nav-wrapper" },
-    React.createElement("a", { href: "index.html", width: '10px', height: '10px'}, "kiaravong",
+    React.createElement("a", { href: "index", width: '10px', height: '10px'}, "kiaravong",
     ),
 
     React.createElement("a", {
@@ -130,8 +130,8 @@ const Projects = props => {
       title: "Pacman",
       img: 'https://store-images.s-microsoft.com/image/apps.62763.14199964686811663.f257cbf1-42a5-4d4a-9087-aa31c6a47068.08239ffb-0d9a-4cb1-8fd0-c3b414a9b26c?mode=scale&q=90&h=270&w=270&background=%230078D7',
       tech: "java",
-      link: 'projects/pacman.html',
-      repo: "projects/pacman-code.html" }, 
+      link: 'projects/pacman',
+      repo: "projects/pacman-code" }, 
 
     React.createElement("small", null, "Built using JavaFx."), 
     React.createElement("p", null, "This is a recreation of the class game Pacman.")), 
@@ -141,8 +141,8 @@ const Projects = props => {
       title: "Tetris",
       img: 'https://img.freepik.com/premium-vector/game-tetris-square-template_6343-27.jpg',
       tech: "java",
-      link: 'projects/tetris.html',
-      repo: "projects/tetris-code.html" }, 
+      link: 'projects/tetris',
+      repo: "projects/tetris-code" }, 
 
     React.createElement("small", null, "Built using JavaFx."), 
     React.createElement("p", null, "This is a recreation of the class game Tetris.")), 
@@ -154,7 +154,7 @@ const Projects = props => {
       img: 'projects/img/hotdog.png',
       tech: "py html css",
       link: 'http://kiaravong.pythonanywhere.com/',
-      repo: "projects/hotdog-code.html" }, 
+      repo: "projects/hotdog-code" }, 
 
     React.createElement("small", null, "Built using Python, HTML, and CSS."), 
     React.createElement("p", null, "Uses VGG16 to predict whether an image is a hotdog or not.")), 
@@ -165,8 +165,8 @@ const Projects = props => {
       title: "Dinosaur Game",
       img: 'projects/img/dinosaur.jpg',
       tech: "js css html",
-      link: 'projects/dinosaur.html',
-      repo: "projects/dinosaur-code.html" }, 
+      link: 'projects/dinosaur',
+      repo: "projects/dinosaur-code" }, 
 
     React.createElement("small", null, "Built using HTML, CSS, and JavaScript."), 
     React.createElement("p", null, "This is a recreation of the no internet dinosaur game by google.")), 
@@ -178,8 +178,8 @@ const Projects = props => {
       title: "Tarot Cards",
       img: 'https://cdn.shopify.com/s/files/1/2636/1058/files/mini-rider-waite-tarot-activity-gifts-cards-deck-friends-herthem-card-887.jpg',
       tech: "js html css",
-      link: 'projects/tarot.html',
-      repo: "projects/tarot-code.html" }, 
+      link: 'projects/tarot',
+      repo: "projects/tarot-code" }, 
 
     React.createElement("small", null, "Built using JavaScript, HTML, and CSS."), 
     React.createElement("p", null, "Randomly picks a tarot card for you.")), 
@@ -194,8 +194,8 @@ const Projects = props => {
 		title: "PI Game",
 		img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRI-RzdK1BRIjh-lZKXqjD3Bl195kF85Vu6w&usqp=CAU',
 		tech: "js html css",
-		link: 'projects/pi.html',
-		repo: "projects/pi-code.html" }, 
+		link: 'projects/pi',
+		repo: "projects/pi-code" }, 
   
 	  React.createElement("small", null, "Built using JavaScript, HTML, and CSS."), 
 	  React.createElement("p", null, "Randomly picks a tarot card for you.")), 
@@ -208,8 +208,8 @@ const Projects = props => {
       title: "Stick Hero",
       img: 'projects/img/stick.png',
       tech: "js html css",
-      link: 'projects/stick.html',
-      repo: "projects/stick-code.html" }, 
+      link: 'projects/stick',
+      repo: "projects/stick-code" }, 
     
       React.createElement("small", null, "Built using JavaScript, HTML, and CSS."), 
       React.createElement("p", null, "Recreation of the IOS Stick Hero game.")), 
