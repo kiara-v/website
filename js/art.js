@@ -14,25 +14,15 @@ const Menu = props => {
     React.createElement("li", null, 
     React.createElement("a", { href: "/", onClick: props.toggleMenu }, "HOME")), 
 
-
-
-    React.createElement("li", null, 
-    React.createElement("a", { href: "#about", onClick: props.toggleMenu }, "ABOUT")), 
-    
-
     React.createElement("li", null, 
     React.createElement("a", { href: "resume", onClick: props.toggleMenu }, "RESUME")), 
-
-
 
     React.createElement("li", null, 
     React.createElement("a", { href: "portfolio", onClick: props.toggleMenu }, "PROJECTS")), 
 
-
-
-    React.createElement("li", null, 
-    React.createElement("a", { href: "#contact", onClick: props.toggleMenu }, "CONTACT")
-    )), 
+    // React.createElement("li", null, 
+    // React.createElement("a", { href: "surprise", onClick: props.toggleMenu }, "SURPRISE")), 
+), 
 
 
     React.createElement(SocialLinks, null))));
@@ -50,24 +40,89 @@ const Nav = props => {
   return (
     React.createElement(React.Fragment, null, 
     React.createElement("nav", { id: "navbar" }, 
-      React.createElement("div", { className: "nav-wrapper"}, 
-        React.createElement("a", { href: "/" }, "kiaravong",
-          // React.createElement("p", { className: "brand"}, "kiara", 
-          // React.createElement("strong", {}, "vong"))
-        ),
-    
+    React.createElement("div", { className: "nav-wrapper" },
+    React.createElement("a", { href: "/", width: '10px', height: '10px'}, "kiaravong",
+    ),
 
     React.createElement("a", {
       onClick: props.toggleMenu,
       className: props.showMenu === 'active' ? 'menu-button active' : 'menu-button' }, 
 
     React.createElement("span", null))))));
-
-
-
-
-
 };
+
+
+
+/***********************
+  Header Component
+ ***********************/
+
+const Header = props => {
+  return (
+    React.createElement("header", { id: "welcome-section" }));
+};
+
+
+/***********************
+  Art Component
+ ***********************/
+
+const Art = props => {
+  return (
+    React.createElement("section", { id: "art" },
+    React.createElement("div", { className: "art-container" }, 
+    React.createElement("div", { className: "heading" }, 
+    React.createElement("h3", { className: "title" }, "Art"), 
+    React.createElement("p", { className: "separator" })), 
+
+    React.createElement('section', { className: '' },
+    React.createElement('div', { className: 'wrapper grid-1 text-center' },
+      React.createElement('div', { className: 'col' },
+        React.createElement('div', { className: 'project-filter' },
+          React.createElement('a', { href: '#', className: 'filter', 'data-filter': '*' }, 'All'),
+          React.createElement('a', { href: '#', className: 'filter active', 'data-filter': '.drawings' }, 'Drawing'),
+          React.createElement('a', { href: '#', className: 'filter', 'data-filter': '.painting' }, 'Painting'),
+          React.createElement('a', { href: '#', className: 'filter', 'data-filter': '.photography' }, 'Photography'),
+          React.createElement('a', { href: '#', className: 'filter', 'data-filter': '.design' }, 'Design')
+        )
+      )
+    ),
+
+    React.createElement('div', { className: 'wrapper' },
+      React.createElement('div', { id: 'project-grid', className: 'grid-4_md-2_sm-1 project-grid small-gutter' },
+
+      
+        React.createElement('div', { className: 'col project project--hover-2 drawings' },
+          React.createElement('div', { className: 'project__img-holder' },
+            React.createElement('img', { src: 'arts/graphics/chan.jpg', alt: '', className: 'project__img' }),
+            React.createElement('div', { className: 'project__overlay' },
+              React.createElement('div', { className: 'project__icons' },
+                React.createElement('a', { href: 'arts/graphics' }, React.createElement('i', { className: 'fa fa-search' }))
+              )
+            ),
+            React.createElement('div', { className: 'project__description' },
+              React.createElement('span', { className: 'project__category' }, React.createElement('a', { href: 'arts/graphics' }, 'Graphics'))
+            )
+          )
+        ),
+        // other project items go here ...
+      )
+    ),
+
+    React.createElement('div', { className: 'wrapper grid' },
+      React.createElement('div', { className: 'col-6_xs-12' }),
+      React.createElement('div', { className: 'col-6_xs-12' })
+    ),
+
+    React.createElement('div', { className: 'wrapper grid-3 text-center' },
+      React.createElement('div', { className: 'col' }),
+      React.createElement('div', { className: 'col' })
+    )
+  
+  ))));
+};
+
+
 
 
 
@@ -126,7 +181,9 @@ class App extends React.Component {constructor(...args) {super(...args);_defineP
     return (
       React.createElement(React.Fragment, null, 
       React.createElement(Menu, { toggleMenu: this.toggleMenu, showMenu: this.state.menuState }), 
-      React.createElement(Nav, { toggleMenu: this.toggleMenu, showMenu: this.state.menuState })
+      React.createElement(Nav, { toggleMenu: this.toggleMenu, showMenu: this.state.menuState }), 
+      React.createElement(Header, null), 
+      React.createElement(Art, null)
       ));
 
 
@@ -135,17 +192,9 @@ class App extends React.Component {constructor(...args) {super(...args);_defineP
   componentDidMount() {
     const navbar = document.querySelector('#navbar');
     const header = document.querySelector('#welcome-section');
-    const forest = document.querySelector('.forest');
-    const silhouette = document.querySelector('.silhouette');
-    let forestInitPos = -300;
 
     window.onscroll = () => {
       let scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
-
-      if (scrollPos <= window.innerHeight) {
-        silhouette.style.bottom = `${parseInt(scrollPos / 6)}px`;
-        forest.style.bottom = `${parseInt(forestInitPos + scrollPos / 6)}px`;
-      }
 
       if (scrollPos - 100 <= window.innerHeight)
       header.style.visibility = header.style.visibility === 'hidden' && 'visible';else
@@ -173,4 +222,4 @@ class App extends React.Component {constructor(...args) {super(...args);_defineP
 
 
 
-ReactDOM.render( React.createElement(App, null), document.getElementById('menu'));
+ReactDOM.render( React.createElement(App, null), document.getElementById('app'));

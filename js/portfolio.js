@@ -18,7 +18,7 @@ const Menu = props => {
     React.createElement("a", { href: "resume", onClick: props.toggleMenu }, "RESUME")), 
 
     React.createElement("li", null, 
-    React.createElement("a", { href: "projects", onClick: props.toggleMenu }, "PROJECTS")), 
+    React.createElement("a", { href: "portfolio", onClick: props.toggleMenu }, "PROJECTS")), 
 
     // React.createElement("li", null, 
     // React.createElement("a", { href: "surprise", onClick: props.toggleMenu }, "SURPRISE")), 
@@ -101,10 +101,6 @@ const Project = props => {
 
     React.createElement("a", { href: link, target: "_blank", rel: "noopener noreferrer" }, "Try it Live ", 
     React.createElement("i", { className: "fas fa-external-link-alt" }))))));
-
-
-
-
 
 };
 

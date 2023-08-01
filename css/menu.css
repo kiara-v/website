@@ -13,6 +13,13 @@ html, body {
   height: 100%;
 }
 
+#welcome-section {
+  position: relative;
+  height: 220px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
 .menu-container {
   color: #252934;
   background: #fafafa;
