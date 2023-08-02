@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Tarot Cards</title>
+  <link rel="stylesheet" href="tarot.css">
+<link rel="shortcut icon" href="/css/img/pngfind.com-margot-robbie-png-1259974.png" />
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main>
+  <section>
+    <h1>Tarot Cards</h1>
+    <!-- <div role="group" aria-label="Color Theme" tabindex="0">
+      <button
+        role="radio" aria-checked="true" tabindex="0" data-augmented-ui
+      >
+        V's Theme
+      </button>
+      <button
+        role="radio" aria-checked="false" tabindex="-1" data-augmented-ui
+      >
+        Johnny's Theme
+      </button>
+      <button
+        role="radio" aria-checked="false" tabindex="-1" data-augmented-ui
+      >
+        Jane's Theme
+      </button>
+    </div> -->
+    <div id="major-arcana-2077"></div>
+  </section>
+  <template id="card-template">
+    <figure class="card" tabindex="0" data-augmented-ui>
+      <img src="https://i.imgur.com/ihZ6qn6.png" alt="placeholder">
+      <figcaption data-augmented-ui>~</figcaption>
+      <div class="decor" aria-hidden="true"></div>
+    </figure>
+  </template>
+  <button type="button" aria-hidden="true" id="modalbg" title="close modal"></button>
+  <div
+    id="window-pane"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+    aria-describedby="modal-desc"
+    aria-hidden="true"
+  >
+    <div class="handle" data-augmented-ui>
+    </div>
+    <div class="img-frame" data-augmented-ui>
+      <img src="https://i.imgur.com/ihZ6qn6.png" alt="placeholder">
+    </div>
+    <div class="details" data-augmented-ui>
+      <h2 id="modal-title">~</h2>
+      <p id="modal-desc">~</p>
+      <button type="button" title="close modal">X</button>
+    </div>
+  </div>
+</main>
+  <script type="module" src="tarot.js"></script>
+
+</body>
+</html>

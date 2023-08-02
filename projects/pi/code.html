@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code</title>
+  <link rel='stylesheet' href='https://unpkg.com/augmented-ui@2.0.0/augmented-ui.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.35.0/codemirror.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/addon/scroll/simplescrollbars.min.css'>
+<link rel="stylesheet" href="../code.css">
+<link rel="shortcut icon" href="/css/img/pngfind.com-margot-robbie-png-1259974.png" />
+
+</head>
+<body>
+<code class="code-container" content="// Kiara 🖤">
+  <div class="glow-container">
+    <div class="augs" data-augmented-ui></div>
+  </div>
+  <section class="augs bg" data-augmented-ui>
+    <button class="dots" onclick="changeMode()" title="change mode"></button>
+    <input value="propjockey.io">
+    <div class="code highcontrast-dark">
+      <textarea id="code">
+function update(dt) {
+	// movement
+	if (keys.ArrowUp) {
+		if (piGuy.velY > -piGuy.speed) {
+			piGuy.velY--;
+		}
+	}
+	if (keys.ArrowDown) {
+		if (piGuy.velY < piGuy.speed) {
+			piGuy.velY++;
+		}
+	}
+	if (keys.ArrowRight) {
+		if (piGuy.velX < piGuy.speed) {
+			piGuy.velX++;
+		}
+	}
+	if (keys.ArrowLeft) {
+		if (piGuy.velX > -piGuy.speed) {
+			piGuy.velX--;
+		}
+	}
+	// piGuy Velocity
+	piGuy.velY *= piGuy.friction;
+	piGuy.velX *= piGuy.friction;
+	// vectors of piGuy
+	let v = [
+		[piGuy.x, piGuy.y], // top left
+		[piGuy.x + piGuy.w, piGuy.y], // top right
+		[piGuy.x + piGuy.w, piGuy.y + piGuy.h], // bottom right
+		[piGuy.x, piGuy.y + piGuy.h] // bottom left
+	];
+	// Move piGuy within bounds
+	if (piGuy.velX < 0 && inCircle(...v[0]) && inCircle(...v[3])) {
+		piGuy.x += piGuy.velX;
+	} else if (piGuy.velX > 0 && inCircle(...v[1]) && inCircle(...v[2])) {
+		piGuy.x += piGuy.velX;
+	}
+	if (piGuy.velY < 0 && inCircle(...v[0]) && inCircle(...v[1])) {
+		piGuy.y += piGuy.velY;
+	} else if (piGuy.velY > 0 && inCircle(...v[2]) && inCircle(...v[3])) {
+		piGuy.y += piGuy.velY;
+	}
+	// Detector position
+	detector.s = degreesToRad(detector.ang - detector.arc / 2);
+	detector.e = degreesToRad(detector.ang + detector.arc / 2);
+	// Detector Size
+	detector.arc = 30 + 330 * dt;
+	// direction & speed
+	if (dt < 0.33) {
+		detector.ang += 1;
+	} else if (dt < 0.66) {
+		detector.ang -= 1.2;
+		piGuy.speed = 2.2;
+	} else if (dt < 1) {
+		detector.ang += 1.4;
+		piGuy.speed = 2.4;
+	}
+	// draw
+	draw();
+	// collision detection
+	let arcPoints = [
+		[200, 200, Math.cos(detector.s) * r + 200, Math.sin(detector.s) * r + 200],
+		[200, 200, Math.cos(detector.e) * r + 200, Math.sin(detector.e) * r + 200]
+	];
+	collision = detectCollision(v, arcPoints);
+	collision && GAME_OVER();
+}
+
+// -----------------------------
+// 	Draw
+// -----------------------------
+
+function draw() {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	// Arena
+	ctx.beginPath();
+	ctx.arc(200, 200, 190, 0, 2 * Math.PI);
+	ctx.strokeStyle = "#771818";
+	ctx.lineWidth = 6;
+	ctx.fillStyle = "#551411";
+	ctx.fill();
+	ctx.stroke();
+	// Detector
+	ctx.beginPath();
+	ctx.moveTo(200, 200);
+	ctx.arc(200, 200, 187, detector.s, detector.e);
+	ctx.lineTo(200, 200);
+	ctx.fillStyle = "#EF476F";
+	ctx.fill();
+	// PI Guy
+	ctx.beginPath();
+	ctx.rect(piGuy.x, piGuy.y, 30, 10);
+	ctx.rect(piGuy.x + 4, piGuy.y + 10, 8, 20);
+	ctx.rect(piGuy.x + 18, piGuy.y + 10, 8, 16);
+	ctx.rect(piGuy.x + 22, piGuy.y + 22, 8, 8);
+	ctx.fillStyle = "#fcc74c";
+	ctx.fill();
+}
+
+// -----------------------------
+// 	Play
+// -----------------------------
+
+function play(duration) {
+	let start = performance.now();
+	let secs = "-0";
+	let i = 1;
+	requestAnimationFrame(function play(time) {
+		let ms = time - start;
+		let progress = ms / duration;
+		if (progress > 1) progress = 1;
+		// keeping score
+		if (secs !== (ms / 1000).toFixed(0)) {
+			secs = (ms / 1000).toFixed(0);
+			i += Number.parseInt(secs / 3);
+			score = i;
+		}
+		// update
+		update(progress);
+		// step
+		if (progress < 1 && !collision) requestAnimationFrame(play);
+	});
+}
+
+      </textarea>
+    </div>
+  </section>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/javascript/javascript.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/css/css.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/addon/scroll/simplescrollbars.min.js'></script>
+<script  src="../code.js"></script>
+
+</body>
+</html>

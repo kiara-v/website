@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code</title>
+  <link rel='stylesheet' href='https://unpkg.com/augmented-ui@2.0.0/augmented-ui.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.35.0/codemirror.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/addon/scroll/simplescrollbars.min.css'>
+<link rel="stylesheet" href="../code.css">
+<link rel="shortcut icon" href="/css/img/pngfind.com-margot-robbie-png-1259974.png" />
+
+</head>
+<body>
+<code class="code-container" content="// Kiara 🖤">
+  <div class="glow-container">
+    <div class="augs" data-augmented-ui></div>
+  </div>
+  <section class="augs bg" data-augmented-ui>
+    <button class="dots" onclick="changeMode()" title="change mode"></button>
+    <input value="Hotdog or Not">
+    <div class="code highcontrast-dark">
+      <textarea id="code">
+def is_hotdog(file):
+    file.save("pic.jpg")
+    
+    image = load_img("pic.jpg", target_size=(224, 224))
+    # pixels to numpy array
+    image = img_to_array(image)
+    # reshape data
+    image = image.reshape((1, image.shape[0], image.shape[1], image.shape[2]))
+    # prepare for VGG model
+    image = preprocess_input(image)
+    # predict
+    yhat = model.predict(image)
+    # convert
+    label = decode_predictions(yhat)
+    # return result (hotdog or not hotdog)
+    return label[0][0][1] == "hotdog"
+      </textarea>
+    </div>
+  </section>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/javascript/javascript.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/css/css.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/addon/scroll/simplescrollbars.min.js'></script>
+<script  src="../code.js"></script>
+
+</body>
+</html>
