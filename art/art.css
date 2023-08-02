@@ -327,12 +327,5 @@ img {
   text-align: justify;
 }
 
-.art-wrapper {
-	margin: 0 auto;
-	max-width: 70rem;
-	display: grid;
-  padding: 3rem 1rem;
-	min-height: 100vh;
-}
 
 

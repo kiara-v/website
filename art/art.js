@@ -79,8 +79,8 @@ const Art = props => {
     React.createElement('div', { className: 'wrapper grid-1 text-center' },
       React.createElement('div', { className: 'col' },
         React.createElement('div', { className: 'project-filter' },
-          React.createElement('a', { href: '#', className: 'filter', 'data-filter': '*' }, 'All'),
-          React.createElement('a', { href: '#', className: 'filter active', 'data-filter': '.drawings' }, 'Drawing'),
+          React.createElement('a', { href: '#', className: 'filter active', 'data-filter': '*' }, 'All'),
+          React.createElement('a', { href: '#', className: 'filter', 'data-filter': '.drawings' }, 'Drawing'),
           React.createElement('a', { href: '#', className: 'filter', 'data-filter': '.painting' }, 'Painting'),
           React.createElement('a', { href: '#', className: 'filter', 'data-filter': '.photography' }, 'Photography'),
           React.createElement('a', { href: '#', className: 'filter', 'data-filter': '.design' }, 'Design')
@@ -89,19 +89,189 @@ const Art = props => {
     ),
 
     React.createElement('div', { className: 'wrapper' },
-      React.createElement('div', { id: 'project-grid', className: 'grid-4_md-2_sm-1 project-grid small-gutter' },
+      React.createElement('div', { id: 'project-grid', className: 'grid-3_md-2_sm-1 project-grid' },
 
       
         React.createElement('div', { className: 'col project project--hover-2 drawings' },
           React.createElement('div', { className: 'project__img-holder' },
-            React.createElement('img', { src: 'arts/graphics/chan.jpg', alt: '', className: 'project__img' }),
+            React.createElement('img', { src: 'graphics/img/cover.jpg', alt: '', className: 'project__img' }),
             React.createElement('div', { className: 'project__overlay' },
               React.createElement('div', { className: 'project__icons' },
-                React.createElement('a', { href: 'arts/graphics' }, React.createElement('i', { className: 'fa fa-search' }))
+                React.createElement('a', { href: 'graphics' }, React.createElement('i', { className: 'fa fa-search' }))
               )
             ),
             React.createElement('div', { className: 'project__description' },
-              React.createElement('span', { className: 'project__category' }, React.createElement('a', { href: 'arts/graphics' }, 'Graphics'))
+              React.createElement('span', { className: 'project__category' }, React.createElement('a', { href: 'graphics' }, 'Graphics'))
+            )
+          )
+        ),
+        React.createElement('div', { className: 'col project project--hover-2 drawings' },
+          React.createElement('div', { className: 'project__img-holder' },
+            React.createElement('img', { src: 'sketches/img/stiles.jpg', alt: '', className: 'project__img' }),
+            React.createElement('div', { className: 'project__overlay' },
+              React.createElement('div', { className: 'project__icons' },
+                React.createElement('a', { href: 'sketches' }, React.createElement('i', { className: 'fa fa-search' }))
+              )
+            ),
+            React.createElement('div', { className: 'project__description' },
+              React.createElement('span', { className: 'project__category' }, React.createElement('a', { href: 'sketches' }, 'Sketches'))
+            )
+          )
+        ),
+        React.createElement('div', { className: 'col project project--hover-2 design' },
+          React.createElement('div', { className: 'project__img-holder' },
+            React.createElement('img', { src: 'yearbook/img/full3.jpg', alt: '', className: 'project__img' }),
+            React.createElement('div', { className: 'project__overlay' },
+              React.createElement('div', { className: 'project__icons' },
+                React.createElement('a', { href: 'yearbook' }, React.createElement('i', { className: 'fa fa-search' }))
+              )
+            ),
+            React.createElement('div', { className: 'project__description' },
+              React.createElement('span', { className: 'project__category' }, React.createElement('a', { href: 'yearbook' }, 'Yearbook'))
+            )
+          )
+        ),
+        React.createElement('div', { className: 'col project project--hover-2 photography' },
+          React.createElement('div', { className: 'project__img-holder' },
+            React.createElement('img', { src: 'football/img/6.jpg', alt: '', className: 'project__img' }),
+            React.createElement('div', { className: 'project__overlay' },
+              React.createElement('div', { className: 'project__icons' },
+                React.createElement('a', { href: 'football' }, React.createElement('i', { className: 'fa fa-search' }))
+              )
+            ),
+            React.createElement('div', { className: 'project__description' },
+              React.createElement('span', { className: 'project__category' }, React.createElement('a', { href: 'football' }, 'Football'))
+            )
+          )
+        ),
+        React.createElement('div', { className: 'col project project--hover-2 photography' },
+          React.createElement('div', { className: 'project__img-holder' },
+            React.createElement('img', { src: 'cheer/img/4.jpg', alt: '', className: 'project__img' }),
+            React.createElement('div', { className: 'project__overlay' },
+              React.createElement('div', { className: 'project__icons' },
+                React.createElement('a', { href: 'cheer' }, React.createElement('i', { className: 'fa fa-search' }))
+              )
+            ),
+            React.createElement('div', { className: 'project__description' },
+              React.createElement('span', { className: 'project__category' }, React.createElement('a', { href: 'cheer' }, 'Cheer'))
+            )
+          )
+        ),
+        React.createElement('div', { className: 'col project project--hover-2 photography' },
+          React.createElement('div', { className: 'project__img-holder' },
+            React.createElement('img', { src: 'swim/img/6.jpg', alt: '', className: 'project__img' }),
+            React.createElement('div', { className: 'project__overlay' },
+              React.createElement('div', { className: 'project__icons' },
+                React.createElement('a', { href: 'swim' }, React.createElement('i', { className: 'fa fa-search' }))
+              )
+            ),
+            React.createElement('div', { className: 'project__description' },
+              React.createElement('span', { className: 'project__category' }, React.createElement('a', { href: 'swim' }, 'Swim'))
+            )
+          )
+        ),
+        React.createElement('div', { className: 'col project project--hover-2 photography' },
+          React.createElement('div', { className: 'project__img-holder' },
+            React.createElement('img', { src: 'flashcards/img/2.jpg', alt: '', className: 'project__img' }),
+            React.createElement('div', { className: 'project__overlay' },
+              React.createElement('div', { className: 'project__icons' },
+                React.createElement('a', { href: 'flashcards' }, 
+                React.createElement('i', { className: 'fa fa-search' }))
+              )
+            ),
+            React.createElement('div', { className: 'project__description' },
+              React.createElement('span', { className: 'project__category' }, 
+              React.createElement('a', { href: 'flashcards' }, 'Flashcards'))
+            )
+          )
+        ),
+        React.createElement('div', { className: 'col project project--hover-2 photography' },
+          React.createElement('div', { className: 'project__img-holder' },
+            React.createElement('img', { src: 'powderpuff/img/3.jpg', alt: '', className: 'project__img' }),
+            React.createElement('div', { className: 'project__overlay' },
+              React.createElement('div', { className: 'project__icons' },
+                React.createElement('a', { href: 'powderpuff' }, 
+                React.createElement('i', { className: 'fa fa-search' }))
+              )
+            ),
+            React.createElement('div', { className: 'project__description' },
+              React.createElement('span', { className: 'project__category' }, 
+              React.createElement('a', { href: 'powderpuff' }, 'Powderpuff'))
+            )
+          )
+        ),
+        React.createElement('div', { className: 'col project project--hover-2 photography' },
+          React.createElement('div', { className: 'project__img-holder' },
+            React.createElement('img', { src: 'fantasy/img/cover.jpg', alt: '', className: 'project__img' }),
+            React.createElement('div', { className: 'project__overlay' },
+              React.createElement('div', { className: 'project__icons' },
+                React.createElement('a', { href: 'fantasy' }, 
+                React.createElement('i', { className: 'fa fa-search' }))
+              )
+            ),
+            React.createElement('div', { className: 'project__description' },
+              React.createElement('span', { className: 'project__category' }, 
+              React.createElement('a', { href: 'fantasy' }, 'Fantasy'))
+            )
+          )
+        ),
+        React.createElement('div', { className: 'col project project--hover-2 photography' },
+          React.createElement('div', { className: 'project__img-holder' },
+            React.createElement('img', { src: 'nature/img/3.jpg', alt: '', className: 'project__img' }),
+            React.createElement('div', { className: 'project__overlay' },
+              React.createElement('div', { className: 'project__icons' },
+                React.createElement('a', { href: 'nature' }, 
+                React.createElement('i', { className: 'fa fa-search' }))
+              )
+            ),
+            React.createElement('div', { className: 'project__description' },
+              React.createElement('span', { className: 'project__category' }, 
+              React.createElement('a', { href: 'nature' }, 'Nature'))
+            )
+          )
+        ),
+        React.createElement('div', { className: 'col project project--hover-2 photography' },
+          React.createElement('div', { className: 'project__img-holder' },
+            React.createElement('img', { src: 'still-life/img/5.jpg', alt: '', className: 'project__img' }),
+            React.createElement('div', { className: 'project__overlay' },
+              React.createElement('div', { className: 'project__icons' },
+                React.createElement('a', { href: 'still-life' }, 
+                React.createElement('i', { className: 'fa fa-search' }))
+              )
+            ),
+            React.createElement('div', { className: 'project__description' },
+              React.createElement('span', { className: 'project__category' }, 
+              React.createElement('a', { href: 'still-life' }, 'Still Life'))
+            )
+          )
+        ),
+        React.createElement('div', { className: 'col project project--hover-2 painting' },
+          React.createElement('div', { className: 'project__img-holder' },
+            React.createElement('img', { src: 'canvas/img/cover.jpg', alt: '', className: 'project__img' }),
+            React.createElement('div', { className: 'project__overlay' },
+              React.createElement('div', { className: 'project__icons' },
+                React.createElement('a', { href: 'canvas' }, 
+                React.createElement('i', { className: 'fa fa-search' }))
+              )
+            ),
+            React.createElement('div', { className: 'project__description' },
+              React.createElement('span', { className: 'project__category' }, 
+              React.createElement('a', { href: 'canvas' }, 'Canvas'))
+            )
+          )
+        ),
+        React.createElement('div', { className: 'col project project--hover-2 drawings' },
+          React.createElement('div', { className: 'project__img-holder' },
+            React.createElement('img', { src: 'hatch/img/cover.jpg', alt: '', className: 'project__img' }),
+            React.createElement('div', { className: 'project__overlay' },
+              React.createElement('div', { className: 'project__icons' },
+                React.createElement('a', { href: 'hatch' }, 
+                React.createElement('i', { className: 'fa fa-search' }))
+              )
+            ),
+            React.createElement('div', { className: 'project__description' },
+              React.createElement('span', { className: 'project__category' }, 
+              React.createElement('a', { href: 'hatch' }, 'Hatching'))
             )
           )
         ),

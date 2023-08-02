@@ -1,7 +1,7 @@
 /*--------------------
 Vars
 --------------------*/
-let progress = 50
+let progress = 0
 let startX = 0
 let active = 0
 let isDown = false
@@ -21,7 +21,7 @@ const getZindex = (array, index) => (array.map((_, i) => (index === i) ? array.l
 Items
 --------------------*/
 const $items = document.querySelectorAll('.carousel-item')
-const $cursors = document.querySelectorAll('.cursor')
+// const $cursors = document.querySelectorAll('.cursor')
 
 const displayItems = (item, index, active) => {
   const zIndex = getZindex([...$items], active)[index]
@@ -45,7 +45,7 @@ Click on Items
 --------------------*/
 $items.forEach((item, i) => {
   item.addEventListener('click', () => {
-    progress = (i/$items.length) * 100 + 10
+    progress = (i/$items.length) * 100 + 100/$items.length
     animate()
   })
 })
@@ -60,11 +60,11 @@ const handleWheel = e => {
 }
 
 const handleMouseMove = (e) => {
-  if (e.type === 'mousemove') {
-    $cursors.forEach(($cursor) => {
-      $cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
-    })
-  }
+  // if (e.type === 'mousemove') {
+  //   $cursors.forEach(($cursor) => {
+  //     $cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
+  //   })
+  // }
   if (!isDown) return
   const x = e.clientX || (e.touches && e.touches[0].clientX) || 0
   const mouseProgress = (x - startX) * speedDrag
