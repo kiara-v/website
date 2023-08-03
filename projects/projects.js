@@ -237,6 +237,16 @@ const Projects = props => {
       React.createElement("small", null, "Built using JavaScript, HTML, and CSS."), 
       React.createElement("p", null, "Recreation of the CopyCat game on Steam.")), 
 
+      React.createElement(Project, {
+        title: "Music",
+        img: 'https://play-lh.googleusercontent.com/PdndnWPEaztvwVnYJh7GbSwDJ9xDJOwLonmx6klDL3uy0NE-X_YQttQ_z0166Wi1zsY',
+        tech: "js css html",
+        link: 'music',
+        repo: "music/code" }, 
+  
+      React.createElement("small", null, "Built using JavaScript, HTML, and CSS."), 
+      React.createElement("p", null, "Music player for some of my favorite songs.")), 
+
 ))));
 
 
