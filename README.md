@@ -1,11 +1,11 @@
 # website
 A portfolio website using React, HTML, CSS, and JavaScript to showcase my personal full-stack projects. The website features a collection of projects that demonstrate my skills in front-end and back-end development, including web applications, databases, and server-side functionality. Deployed using GitHub Pages.
 
-[Live Demo](https://kiara-v.github.io/website/)
+[Live Demo](https://kiara-v.github.io/website/) <3
 
 ![image](https://github.com/kiara-v/website/assets/77811430/16b51239-a502-4a13-8282-f0305a1948bf)
 
-Website showcases:
+Website showcases projects:
 * Pacman
 * Tetris
 * Dinosaur Game
@@ -13,5 +13,15 @@ Website showcases:
 * Stickman
 * Hotdog - Not Hotdog (analyzes if an image is a hotdog or not)
 * Tarot Cards (randomly chooses a tarot card for your future)
+* Chess
+* Platform Game
+* CopyCat
+* Music Player
+
+Also includes an art portfolio for:
+* Drawing
+* Painting
+* Photography
+* Design
 
 Run locally using ```npm install -g http-server``` and ```http-server``` or ```http-server -p 8080```.
